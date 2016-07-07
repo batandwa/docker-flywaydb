@@ -36,5 +36,5 @@ fi
 
 while ! nc db $DATABASE_PORT </dev/null; do sleep 10; done
 
-flyway -url=jdbc:$DATABASE_DRIVER://db:$DATABASE_PORT/$DATABASE_NAME -user=$DATABASE_USER -password=$DATABASE_PASSWORD -encoding=$DATABASE_ENCODING -locations=filesystem:$MIGRATIONS_PATH $OPERATION
+flyway -url=jdbc:$DATABASE_DRIVER://db:$DATABASE_PORT/$DATABASE_NAME -user=$DATABASE_USER -password=$DATABASE_PASSWORD -encoding=$DATABASE_ENCODING -locations=$MIGRATIONS_PATH $OPERATION
 
