@@ -1,6 +1,6 @@
 # containered-flywaydb
 
-This project aims to be an easy way to do migrations for you withou resorting to ORMs, just 
+This project aims to be an easy way to do migrations for you withou resorting to ORMs, just
 plain old SQL files.
 
 The following variables are available to configure the image:
@@ -12,10 +12,11 @@ The following variables are available to configure the image:
 * DATABASE_ENCODING sets the encoding the database will expect
 * DATABASE_DRIVER sets the database driver to be used eg. mysql
 * MIGRATIONS_PATH sets the path the sql files will be found     
+* OPERATION *(optional)* sets the flywaydb command to run. Defaults to `migrate`
 
 # Usage
 
-Considering your current project has a path that contain the sql files named migrations/sql/*.sql ([follow flyway 
+Considering your current project has a path that contain the sql files named migrations/sql/*.sql ([follow flyway
 sql files convention](http://flywaydb.org/documentation/migration/sql.html)). Then
 your docker-compose.yml file could look something like this:
 
